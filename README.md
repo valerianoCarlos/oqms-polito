@@ -7,9 +7,17 @@
 
 ## Running
 
-- Run `npm install` to install dependencies
-- Run `npm run dev` to start the client
-- Run `npm run start` to start the server
+```console
+cd client
+npm install
+npm run dev
+```
+
+```console
+cd server
+npm install
+npm run start
+```
 
 ## Testing
 
@@ -51,6 +59,7 @@ All commands have to be done in the `server` folder.
     - 200 : { data: number } - the ticket number of the client
     - 404 : { message: string } - service does not exists or is not provided by a counter
 - GET `/counter/retCounters`
+
   - response :
     - 200 : {data: {Object}} - get all counters
     - 404 : { message: string} - no couters found
@@ -64,11 +73,14 @@ All commands have to be done in the `server` folder.
 
 ```json
 {
+    "currentTicketNumber": 0,
     "services": [
         {
             "id": <number>,
             "name": <string>,
-            "serviceTime": <number>
+            "serviceTime": <number>,
+            "description": <string>,
+            "color": <string>
         }
     ],
     "counters": [
